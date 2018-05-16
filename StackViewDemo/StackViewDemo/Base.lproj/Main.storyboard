@@ -28,9 +28,6 @@
                                         <state key="normal" title="Clicking on this crashes the app">
                                             <color key="titleColor" red="0.00052623056994816064" green="0.00051053266407353592" blue="0.00051310669471848374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="firstButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g4t-iE-N2i"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zq1-j5-ZmI">
                                         <rect key="frame" x="0.0" y="201" width="375" height="201"/>
