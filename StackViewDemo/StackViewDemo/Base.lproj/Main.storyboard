@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3hm-Zl-EQI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1I3-uf-pyR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTy-5e-UXo">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                        <color key="backgroundColor" red="0.19416368214230284" green="1" blue="0.62999114728619943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Clicking on this crashes the app">
+                                            <color key="titleColor" red="0.00052623056994816064" green="0.00051053266407353592" blue="0.00051310669471848374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g4t-iE-N2i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zq1-j5-ZmI">
+                                        <rect key="frame" x="0.0" y="201" width="375" height="201"/>
+                                        <color key="backgroundColor" red="1" green="0.29593644909506067" blue="0.44206132382024199" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="DOES NOTHING">
+                                            <color key="titleColor" red="1" green="0.99647900574804238" blue="0.94746749045257661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGZ-7Z-Szv">
+                                        <rect key="frame" x="0.0" y="402" width="375" height="201"/>
+                                        <color key="backgroundColor" red="0.62762945708623108" green="0.55313495238864152" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="Click me for next screen">
+                                            <color key="titleColor" red="1" green="0.94868481186985198" blue="0.99577155277716523" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="mdx-vM-zCu" kind="show" id="L8I-UC-wLj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1I3-uf-pyR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VdZ-rZ-EKb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1I3-uf-pyR" secondAttribute="bottom" id="YD2-Q2-PEq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1I3-uf-pyR" secondAttribute="trailing" id="gnO-0n-g7a"/>
+                            <constraint firstItem="1I3-uf-pyR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="via-z7-vhR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fPw-zD-cQb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="-89"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fog-m2-nS7">
+            <objects>
+                <viewController id="mdx-vM-zCu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tfw-Z7-X60" customClass="SecondViewController" customModule="StackViewDemo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-Vf-yXa">
+                                <rect key="frame" x="0.0" y="313" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2vf-oK-8mt"/>
+                                </constraints>
+                                <state key="normal" title="Click me to give permission or die."/>
+                                <connections>
+                                    <action selector="givePerms:" destination="tfw-Z7-X60" eventType="touchUpInside" id="XWe-aE-kvZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hor-Vf-yXa" firstAttribute="centerY" secondItem="tfw-Z7-X60" secondAttribute="centerY" id="B3Y-nU-65G"/>
+                            <constraint firstItem="Hor-Vf-yXa" firstAttribute="leading" secondItem="cJZ-CX-oeq" secondAttribute="leading" id="YTR-Ig-Lkg"/>
+                            <constraint firstItem="cJZ-CX-oeq" firstAttribute="trailing" secondItem="Hor-Vf-yXa" secondAttribute="trailing" id="kkW-BU-SQK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cJZ-CX-oeq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Fu-9J-zBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247.2" y="28.335832083958024"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IpF-fZ-c9W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3hm-Zl-EQI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R4S-rl-dYV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sIC-ar-E0k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrc-oY-P2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="-18"/>
+        </scene>
+    </scenes>
+</document>
